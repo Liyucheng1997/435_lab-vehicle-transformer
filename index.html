@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AURORA-7 · 变形机甲</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <canvas id="view"></canvas>
+
+  <div id="loading"><div class="spin"></div><span>正在铸造机体…</span></div>
+
+  <header class="hud top">
+    <div class="brand">
+      <div class="mark"></div>
+      <div>
+        <h1>AURORA-7 <small>极光七号</small></h1>
+        <p>原创变形机甲 · 程序化建模</p>
+      </div>
+    </div>
+    <div class="mode" id="mode">载具形态</div>
+  </header>
+
+  <footer class="hud bottom">
+    <button id="btn-transform" class="primary"><span id="btn-label">变形</span><kbd>空格</kbd></button>
+    <div class="scrub">
+      <span>载具</span>
+      <input id="scrub" type="range" min="0" max="1000" value="0" />
+      <span>机甲</span>
+    </div>
+    <div class="group">
+      <button id="btn-rotate" class="toggle on">自动环绕</button>
+      <button id="btn-lights" class="toggle on">灯光</button>
+      <button id="btn-sound" class="toggle on">音效</button>
+    </div>
+    <div class="group swatches" id="swatches"></div>
+    <div class="group">
+      <button data-view="hero">主视角</button>
+      <button data-view="front">正面</button>
+      <button data-view="side">侧面</button>
+      <button data-view="back">背面</button>
+      <button data-view="detail">特写</button>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
